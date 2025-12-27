@@ -1596,7 +1596,7 @@ namespace Oxide.Plugins
         [ChatCommand("wphammer")]
         private void CmdWallpaperHammer(BasePlayer player, string command, string[] args){
             if (!HasPermission(player.UserIDString, permadmin)){
-                player.ChatMessage("This command can only be used if you have the admin permission from BetterTC.");
+                player.ChatMessage("This command can only be used if you have the admin permission from PimpMyTC.");
                 return;
             }
             GiveWallpaperHammer(player);
@@ -1607,7 +1607,7 @@ namespace Oxide.Plugins
             var player = arg.Player();
             if (player != null){
                 if (!HasPermission(player.UserIDString, permadmin)){
-                    arg.ReplyWith("This command can only be used if you have the admin permission from BetterTC.");
+                    arg.ReplyWith("This command can only be used if you have the admin permission from PimpMyTC.");
                     return;
                 }
                 GiveWallpaperHammer(player);
@@ -1889,7 +1889,7 @@ namespace Oxide.Plugins
                     if (tcData.CustomWallpapers.TryGetValue(category, out var list) && list.Remove(skinid)){
                         SaveData();
                         player.ShowToast(GameTip.Styles.Error, $"Removed custom skin {skinid} from {category}");
-                        Puts($"[BetterTC] Admin {player.displayName} removed custom skin {skinid} from {category}");
+                        Puts($"[PimpMyTC] Admin {player.displayName} removed custom skin {skinid} from {category}");
                     }
                     
                     string id = arg.Args[3];
@@ -3872,7 +3872,7 @@ namespace Oxide.Plugins
             string currentVersion = this.Version.ToString();
             string oldVersion = tcData.Version ?? "0.0.0";
             if (oldVersion != currentVersion){
-                Puts($"[BetterTC] Detected data version '{oldVersion}', updating to '{currentVersion}'...");
+                Puts($"[PimpMyTC] Detected data version '{oldVersion}', updating to '{currentVersion}'...");
                 ApplyMigrations(oldVersion, currentVersion);
                 tcData.Version = currentVersion;
                 SaveData();
