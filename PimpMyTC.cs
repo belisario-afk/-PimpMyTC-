@@ -49,14 +49,14 @@ namespace Oxide.Plugins
             public const string TitleBarBackground = "0.15 0.08 0.25 0.95";
             public const string TitleBarAccent = "0.6 0.2 0.8 1.0";
             
-            // Button colors with RGB-inspired accents
-            public const string ButtonPrimary = "0.4 0.2 0.7 0.9";          // Purple accent
-            public const string ButtonSuccess = "0.2 0.7 0.4 0.9";          // Green accent
-            public const string ButtonDanger = "0.85 0.2 0.3 0.9";          // Red accent
+            // Button colors - using original plugin style (bright colors, lower opacity)
+            public const string ButtonPrimary = "0.5 0.3 0.8 0.9";          // Purple accent
+            public const string ButtonSuccess = "0.80 1.00 0.50 0.10";      // Yellow-green (original upgrade color)
+            public const string ButtonDanger = "0.90 0.20 0.20 0.50";       // Red (original stop color)
             public const string ButtonWarning = "0.9 0.6 0.1 0.9";          // Orange/Yellow accent
-            public const string ButtonInfo = "0.2 0.5 0.9 0.9";             // Blue accent
-            public const string ButtonDisabled = "0.3 0.3 0.35 0.6";        // Gray
-            public const string ButtonActive = "0.9 0.3 0.5 0.95";          // Pink/Magenta active
+            public const string ButtonInfo = "0.30 0.30 0.80 0.90";         // Blue (original pagination color)
+            public const string ButtonDisabled = "0.20 0.20 0.20 0.80";     // Gray (original locked color)
+            public const string ButtonActive = "0.90 0.20 0.20 0.50";       // Pink/Magenta active
             
             // Item card colors
             public const string CardBackground = "0.15 0.17 0.22 0.85";
@@ -3620,10 +3620,10 @@ namespace Oxide.Plugins
             public bool useRaidBlock = true;
 
             [JsonProperty("GUI Buttons TC - Color Default")]
-            public string btntccolor = "0.4 0.2 0.7 0.85";
+            public string btntccolor = "0.3 0.40 0.3 0.60";
 
             [JsonProperty("GUI Buttons TC - Color Active")]
-            public string btntccolora = "0.9 0.3 0.5 0.90";
+            public string btntccolora = "0.90 0.20 0.20 0.50";
             
             [JsonProperty("GUI Buttons TC - OffsetMin")]
             public string OffsetMin = "280 621";
