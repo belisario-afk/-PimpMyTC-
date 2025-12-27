@@ -130,6 +130,7 @@ namespace Oxide.Plugins
 
         private ulong hammerWallpaperSkin = 3494416562;
 
+        // Note: API URLs use original 'bettertc' path - this is an external CDN we don't control
         private string apiUrl => BuildInfo.Current.Scm.Branch.Equals("release", StringComparison.OrdinalIgnoreCase) 
             ? "https://cdn.rustspain.com/plugins/bettertc/bettertc.json" 
             : "https://cdn.rustspain.com/plugins/bettertc/staging.json";
