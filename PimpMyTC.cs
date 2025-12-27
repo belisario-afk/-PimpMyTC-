@@ -131,7 +131,7 @@ namespace Oxide.Plugins
         private ulong hammerWallpaperSkin = 3494416562;
 
         private string apiUrl => BuildInfo.Current.Scm.Branch.Equals("release", StringComparison.OrdinalIgnoreCase) 
-            ? "https://cdn.rustspain.com/plugins/bettertc/pimpmytc.json" 
+            ? "https://cdn.rustspain.com/plugins/bettertc/bettertc.json" 
             : "https://cdn.rustspain.com/plugins/bettertc/staging.json";
         private Dictionary<BuildingPrivlidge, TCConfig> BuildingCupboard = new Dictionary<BuildingPrivlidge, TCConfig>();
         private int maxGradeTier;
